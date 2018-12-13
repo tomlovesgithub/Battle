@@ -9,5 +9,6 @@ feature 'display hit points' do
     fill_in :player_2_name, with: 'Ninny'
     click_button 'Submit'
     expect(page).to have_content 'Bevin vs. Ninny'
+    expect(page).to have_content 'Ninny: 60HP'
   end
 end
