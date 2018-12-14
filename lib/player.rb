@@ -11,4 +11,12 @@ class Player
     @name
   end
 
+  def attack(victim)
+    victim.reduce_hp
+  end
+
+  def reduce_hp
+    @hp -= 10
+  end
+  
 end
