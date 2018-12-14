@@ -4,10 +4,7 @@
 
 feature 'Players can enter names' do
   scenario 'and see them when battles starts' do
-    visit('/')
-    fill_in :player_1_name, with: 'Bevin'
-    fill_in :player_2_name, with: 'Ninny'
-    click_button 'Submit'
+    fill_names_and_submit
     expect(page).to have_content 'Bevin vs. Ninny'
   end
 end
